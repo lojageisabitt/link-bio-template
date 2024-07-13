@@ -55,6 +55,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-image: url('https://i.pinimg.com/736x/e1/e4/d6/e1e4d6f5a2b77c239b77afb0c3f48d42.jpg');
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
