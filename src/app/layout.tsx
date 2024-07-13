@@ -1,9 +1,7 @@
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ButtonIndex from "@/components/ButtonIndex";
-import HeaderBlog from "@/components/headerBlog";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,20 +14,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          <HeaderBlog/>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <main className="mt-10">{children}</main>
-          <ButtonIndex/>
-          </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
